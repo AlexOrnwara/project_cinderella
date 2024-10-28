@@ -1,0 +1,14 @@
+{
+    "birthdays": [
+        {
+            "name": "Alexandra",
+            "dob": "11-09-2002",
+            "age": 22
+        },
+        {
+            "name": "Bootsies",
+            "dob": "07-04-2001",
+            "age": 23
+        }
+    ]
+}
