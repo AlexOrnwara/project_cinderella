@@ -4,8 +4,9 @@ const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
 const { token } = require('./config.json');
 const cron = require('node-cron'); // Optional, if you use node-cron for scheduling
 const { sendMonthlyReminder, sendWeeklyReminder } = require('./commands/birthdays/birthdayUtils.js'); // Assuming reminder functions are here
+const { trackUserOnline } = require('./onlineNotifier.js');
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildPresences] });
 
 client.commands = new Collection();
 const foldersPath = path.join(__dirname, 'commands');
